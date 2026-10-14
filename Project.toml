@@ -1,2 +1,33 @@
+name = "LenticulumLM"
+uuid = "e332ab55-30d0-474c-81ca-83c0b834f4ba"
+authors = ["DanielBoigk <71269893+DanielBoigk@users.noreply.github.com> and contributors"]
+version = "20261015.0.0-proto"
+
 [deps]
+Lenticulum = "80a378fd-9e01-49e8-9939-ada6559002ad"
+LenticulumCore = "1ac3b398-e9e9-400d-83fd-862c57ff485d"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Lux = "b2108857-7c20-44ae-9111-449ecde12c47"
+LuxCore = "bb33d45b-7691-41d6-9220-0943567d0623"
+Mycelium = "0a724bc2-760c-4b8c-a26e-202a6d9695cb"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+VariationalDiffusion = "ff4e7144-0bbc-4cb1-a056-50f11d0cc546"
+
+# Lenticulum.jl is not registered, and its packages live in one repository (lib/*), so each is
+# taken from GitHub with its subdirectory. Every Lenticulum package that is loaded, directly or
+# through another, must be listed: a dependency's own [sources] are not followed. To work
+# against a local checkout instead, see the README ("Developing against a local Lenticulum").
+[sources]
+Lenticulum = {url = "https://github.com/MathStruct/Lenticulum.jl", rev = "master"}
+LenticulumCore = {url = "https://github.com/MathStruct/Lenticulum.jl", rev = "master", subdir = "lib/LenticulumCore.jl"}
+Mycelium = {url = "https://github.com/MathStruct/Lenticulum.jl", rev = "master", subdir = "lib/Mycelium.jl"}
+VariationalDiffusion = {url = "https://github.com/MathStruct/Lenticulum.jl", rev = "master", subdir = "lib/VariationalDiffusion.jl"}
+
+[compat]
+julia = "1.11"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

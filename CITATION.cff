@@ -1,0 +1,170 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "LenticulumLM: a diffusion language model assembled from implicit learners"
+version: "20261015-proto"
+authors:
+  - family-names: Boigk
+    given-names: Daniel
+    orcid: "https://orcid.org/0009-0003-0812-8869"
+license: MIT
+repository-code: "https://github.com/MathStruct/LenticulumLM"
+url: "https://mathstruct.github.io/LenticulumLM/dev/"
+keywords:
+  - diffusion language models
+  - implicit learning
+  - products of experts
+  - factor graphs
+  - Julia
+abstract: >-
+  LenticulumLM assembles a diffusion language model from implicit learners. Each
+  part is a relation over a few token positions, the model is their product, and
+  every query, whether continuation, backward prediction or infilling, is answered
+  by root finding with the known tokens clamped. It builds on Lenticulum.jl, which
+  provides the implicit learners, their products and their beliefs.
+# Generated from docs/src/refs.bib by docs/site/bib2cff.py: the works cited in the
+# tutorials, implementation notes and theory vault. Edit the .bib file, not this list.
+references:
+  - type: article
+    title: "Training Products of Experts by Minimizing Contrastive Divergence"
+    authors:
+      - family-names: "Hinton"
+        given-names: "Geoffrey E."
+    year: 2002
+    journal: "Neural Computation"
+    volume: "14"
+    issue: "8"
+    start: "1771"
+    end: "1800"
+    doi: "10.1162/089976602760128018"
+  - type: conference-paper
+    title: "Simple and Effective Masked Diffusion Language Models"
+    authors:
+      - family-names: "Sahoo"
+        given-names: "Subham Sekhar"
+      - family-names: "Arriola"
+        given-names: "Marianne"
+      - family-names: "Schiff"
+        given-names: "Yair"
+      - family-names: "Gokaslan"
+        given-names: "Aaron"
+      - family-names: "Marroquin"
+        given-names: "Edgar"
+      - family-names: "Chiu"
+        given-names: "Justin T"
+      - family-names: "Rush"
+        given-names: "Alexander"
+      - family-names: "Kuleshov"
+        given-names: "Volodymyr"
+    year: 2024
+    collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+    url: "https://arxiv.org/abs/2406.07524"
+  - type: conference-paper
+    title: "Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution"
+    authors:
+      - family-names: "Lou"
+        given-names: "Aaron"
+      - family-names: "Meng"
+        given-names: "Chenlin"
+      - family-names: "Ermon"
+        given-names: "Stefano"
+    year: 2024
+    collection-title: "International Conference on Machine Learning (ICML)"
+    url: "https://arxiv.org/abs/2310.16834"
+  - type: generic
+    title: "Large Language Diffusion Models"
+    authors:
+      - family-names: "Nie"
+        given-names: "Shen"
+      - family-names: "Zhu"
+        given-names: "Fengqi"
+      - family-names: "You"
+        given-names: "Zebin"
+      - family-names: "Zhang"
+        given-names: "Xiaolu"
+      - family-names: "Ou"
+        given-names: "Jingyang"
+      - family-names: "Hu"
+        given-names: "Jun"
+      - family-names: "Zhou"
+        given-names: "Jun"
+      - family-names: "Lin"
+        given-names: "Yankai"
+      - family-names: "Wen"
+        given-names: "Ji-Rong"
+      - family-names: "Li"
+        given-names: "Chongxuan"
+    year: 2025
+    url: "https://arxiv.org/abs/2502.09992"
+  - type: conference-paper
+    title: "Reduce, Reuse, Recycle: Compositional Generation with Energy-Based Diffusion Models and MCMC"
+    authors:
+      - family-names: "Du"
+        given-names: "Yilun"
+      - family-names: "Durkan"
+        given-names: "Conor"
+      - family-names: "Strudel"
+        given-names: "Robin"
+      - family-names: "Tenenbaum"
+        given-names: "Joshua B."
+      - family-names: "Dieleman"
+        given-names: "Sander"
+      - family-names: "Fergus"
+        given-names: "Rob"
+      - family-names: "Sohl-Dickstein"
+        given-names: "Jascha"
+      - family-names: "Doucet"
+        given-names: "Arnaud"
+      - family-names: "Grathwohl"
+        given-names: "Will"
+    year: 2023
+    collection-title: "International Conference on Machine Learning (ICML)"
+    url: "https://arxiv.org/abs/2302.11552"
+  - type: conference-paper
+    title: "Compositional Visual Generation with Composable Diffusion Models"
+    authors:
+      - family-names: "Liu"
+        given-names: "Nan"
+      - family-names: "Li"
+        given-names: "Shuang"
+      - family-names: "Du"
+        given-names: "Yilun"
+      - family-names: "Torralba"
+        given-names: "Antonio"
+      - family-names: "Tenenbaum"
+        given-names: "Joshua B."
+    year: 2022
+    collection-title: "European Conference on Computer Vision (ECCV)"
+    url: "https://arxiv.org/abs/2206.01714"
+  - type: conference-paper
+    title: "Diffusion-LM Improves Controllable Text Generation"
+    authors:
+      - family-names: "Li"
+        given-names: "Xiang Lisa"
+      - family-names: "Thickstun"
+        given-names: "John"
+      - family-names: "Gulrajani"
+        given-names: "Ishaan"
+      - family-names: "Liang"
+        given-names: "Percy"
+      - family-names: "Hashimoto"
+        given-names: "Tatsunori B."
+    year: 2022
+    collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+    url: "https://arxiv.org/abs/2205.14217"
+  - type: conference-paper
+    title: "Structured Denoising Diffusion Models in Discrete State-Spaces"
+    authors:
+      - family-names: "Austin"
+        given-names: "Jacob"
+      - family-names: "Johnson"
+        given-names: "Daniel D."
+      - family-names: "Ho"
+        given-names: "Jonathan"
+      - family-names: "Tarlow"
+        given-names: "Daniel"
+      - family-names: "van den Berg"
+        given-names: "Rianne"
+    year: 2021
+    collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+    url: "https://arxiv.org/abs/2107.03006"
