@@ -11,6 +11,8 @@
 - [[Assembling a Language Model from Implicit Learners]]: a language model whose parts are
   relations over token positions, assembled by product; what is built, and the decisions ahead
 - [[README]]: the project pitch
+- [[Environment and Experiments]]: the Nix shells, the layout experiments will take, and where
+  data, teacher models and checkpoints live
 
 ## 2. Implementation
 

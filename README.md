@@ -65,8 +65,27 @@ The repository mirrors Lenticulum.jl's:
 | `test/` | the test suite, against closed forms |
 | `vault/` | the Obsidian vault: design, roadmap, bibliography ([Start Here](vault/Start%20Here.md)) |
 | `docs/` | Documenter pages, Literate tutorials, and the Quartz build of the vault (`docs/site/`) |
+| `flake.nix` | the development shells: every tool the experiments need |
+| `experiments/` | one directory per experiment, each with its own environment (planned) |
 
-## Install
+## Setting up
+
+LenticulumLM is a workspace for experiments rather than a library to install. The Nix flake
+sets up everything: Julia (yours if it is on the PATH, else its own 1.12), the docs toolchain,
+the Hugging Face CLI, and on request Lean, Metamath or Isabelle
+([plan](vault/Design/Environment%20and%20Experiments.md)):
+
+```sh
+nix develop               # Julia, Node, Python with the hf CLI, git-lfs
+nix develop .#gpu         # the same, with the host's NVIDIA driver visible to CUDA.jl
+nix develop .#lean        # + elan; also .#metamath, .#isabelle, .#provers
+```
+
+Data and checkpoints live outside the repository, in `$LENTICULUMLM_DATA` and
+`$LENTICULUMLM_MODELS` (default `~/.cache/lenticulum/lm/`). With direnv, `.envrc` enters the
+default shell on `cd`.
+
+### Without Nix
 
 Neither LenticulumLM nor Lenticulum.jl is registered. `Project.toml` takes Lenticulum's
 packages from GitHub, so a clone instantiates on its own:

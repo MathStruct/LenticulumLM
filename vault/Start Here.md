@@ -5,13 +5,17 @@
 
 ## What lives where
 
-The vault is the whole repository. Its notes sit in two places:
+The vault is the whole repository. Its notes sit beside what they describe:
 
 | where | what | example |
 |---|---|---|
 | `vault/` | **concept and design notes**, grouped by topic | `vault/Design/Assembling a Language Model from Implicit Learners.md` |
 | `src/*.md` | **implementation notes**, one beside each Julia file | `src/sequence.md` beside `sequence.jl` |
+| `experiments/*/` | one directory per experiment, with its own environment and a note on what it found (planned) | |
 | `meta/` | local working material, not part of the repository (ignored by git) | |
+
+The tools come from the Nix flake (`nix develop`), and data and checkpoints live outside the
+repository; both are planned in [[Environment and Experiments]].
 
 LenticulumLM builds on [Lenticulum.jl](https://github.com/MathStruct/Lenticulum.jl), and its
 vault builds on Lenticulum's [theory vault](https://mathstruct.org/Lenticulum.jl/dev/vault/):

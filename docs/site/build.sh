@@ -71,6 +71,14 @@ cp -r "$ROOT/vault/." "$CONTENT/"
 
 # the implementation notes that sit beside the Julia source
 mkdir -p "$CONTENT/src" && cp "$ROOT"/src/*.md "$CONTENT/src/"
+# and the notes of the experiments, one directory each (vault/Design/Environment and Experiments.md)
+for ex in "$ROOT"/experiments/*/; do
+  [[ -d "$ex" ]] || continue
+  if compgen -G "$ex*.md" > /dev/null; then
+    mkdir -p "$CONTENT/experiments/$(basename "$ex")"
+    cp "$ex"*.md "$CONTENT/experiments/$(basename "$ex")/"
+  fi
+done
 
 # the root-level note the vault links to as [[README]].
 # It is written for GitHub, so its repo-relative links are rewritten for the site:

@@ -94,7 +94,7 @@ CITED = {}
 def citations():
     """key -> sorted note names whose generated Bibliography line links to it (link_sources.py)."""
     found = {}
-    files = list((ROOT / "vault").rglob("*.md")) + list((ROOT / "lib").glob("*/src/*.md")) + list((ROOT / "src").glob("*.md"))
+    files = list((ROOT / "vault").rglob("*.md")) + list((ROOT / "lib").glob("*/src/*.md")) + list((ROOT / "src").glob("*.md")) + list((ROOT / "experiments").glob("*/*.md"))
     for f in files:
         if f.name == "Bibliography.md":
             continue

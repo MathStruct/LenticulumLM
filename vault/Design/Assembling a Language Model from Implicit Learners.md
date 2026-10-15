@@ -83,7 +83,8 @@ dissected that way is the question this repository exists to answer.
 
 ## 4. The order of work
 
-The roadmap, with the status of each step, is [[Open Problems in Assembling Language Models]].
+The roadmap, with the status of each step, is [[Open Problems in Assembling Language Models]];
+how the experiments, their data and the tools are set up is [[Environment and Experiments]].
 In short: learned windows on a character corpus (L2) come next, then messages instead of joint
 answers (L5), then a discrete learner (L3) and scale (L4).
 
