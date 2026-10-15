@@ -10,7 +10,7 @@
 >
 > Bibliography: [[Bibliography#^hinton2002poe|Hinton 2002]] · [[Bibliography#^li2022diffusionlm|Li et al. 2022]] · [[Bibliography#^austin2021d3pm|Austin et al. 2021]] · [[Bibliography#^sahoo2024mdlm|Sahoo et al. 2024]] · [[Bibliography#^lou2024sedd|Lou et al. 2024]] · [[Bibliography#^nie2025llada|Nie et al. 2025]] · [[Bibliography#^liu2022composable|Liu et al. 2022]]
 >
-> Lenticulum (vault): [Language Models](https://mathstruct.org/Lenticulum.jl/dev/vault/Applications/Language-Models) · [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Implicit-Diffusion-Learners) · [Composing Diffusion Factors](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Composing-Diffusion-Factors) · [product](https://mathstruct.org/Lenticulum.jl/dev/vault/lib/VariationalDiffusion.jl/product) · [Categorical Belief](https://mathstruct.org/Lenticulum.jl/dev/vault/Factor-Graphs/Categorical-Belief) · [Universal Approximation for Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Universal-Approximation-for-Implicit-Diffusion-Learners)
+> Lenticulum (vault): [Language Models](https://mathstruct.org/Lenticulum.jl/Applications/Language-Models) · [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Implicit-Diffusion-Learners) · [Composing Diffusion Factors](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Composing-Diffusion-Factors) · [product](https://mathstruct.org/Lenticulum.jl/lib/VariationalDiffusion.jl/product) · [Categorical Belief](https://mathstruct.org/Lenticulum.jl/Factor-Graphs/Categorical-Belief) · [Universal Approximation for Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Universal-Approximation-for-Implicit-Diffusion-Learners)
 >
 > Theory (CT-ML wiki): [Markov Category](https://mathstruct.org/CategoryTheory-ML-Wiki/Markov-Category) · [Bayesian Inversion](https://mathstruct.org/CategoryTheory-ML-Wiki/Bayesian-Inversion) · [Variational Free Energy](https://mathstruct.org/CategoryTheory-ML-Wiki/Variational-Free-Energy)
 
@@ -21,7 +21,7 @@ fill in any masked positions. What they are not is **modular**: the model is one
 the whole sequence, trained once, and nothing can be added to it at query time except guidance.
 
 Lenticulum's implicit learners are relations, and relations compose by product
-([Composing Diffusion Factors](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Composing-Diffusion-Factors)).
+([Composing Diffusion Factors](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Composing-Diffusion-Factors)).
 So a language model can be **assembled**: separately learned relations over windows, spans or
 latent summaries, combined into one model whose queries are answered jointly. The pieces this
 needs, and what Lenticulum provides for each:
@@ -62,7 +62,7 @@ keep the relational interface with a discrete model. Lenticulum has nothing of t
 **Joint answers or messages.** `token_marginals` enumerates every answer, $V^u$ of them for $u$
 free positions. A language model needs the per-position beliefs passed between windows instead:
 belief propagation on the chain, with categorical beliefs as messages. Pooling categorical beliefs
-is exact and cheap ([Categorical Belief](https://mathstruct.org/Lenticulum.jl/dev/vault/Factor-Graphs/Categorical-Belief)),
+is exact and cheap ([Categorical Belief](https://mathstruct.org/Lenticulum.jl/Factor-Graphs/Categorical-Belief)),
 but a window relation over continuous codes does not yet produce a categorical message for one
 position given messages on the others.
 

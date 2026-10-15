@@ -114,7 +114,7 @@ Pkg.develop([PackageSpec(path = "../Lenticulum.jl"),
 - The **vault**, on the web beside the [documentation](https://MathStruct.github.io/LenticulumLM/dev/),
   or in Obsidian: open the repository root and start at `vault/Start Here.md`.
 - **Lenticulum's vault**, for the implicit learners themselves:
-  [mathstruct.org/Lenticulum.jl/dev/vault](https://mathstruct.org/Lenticulum.jl/dev/vault/).
+  [mathstruct.org/Lenticulum.jl](https://mathstruct.org/Lenticulum.jl/).
 - The **CT-ML wiki**, for the general category theory both build on:
   [mathstruct.org/CategoryTheory-ML-Wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/).
 

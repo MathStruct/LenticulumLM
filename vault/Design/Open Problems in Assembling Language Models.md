@@ -6,7 +6,7 @@
 
 > Sources: original to this vault (analysis); code: `tokens.jl`, `sequence.jl`
 >
-> Lenticulum (vault): [Open Problems in Implicit Diffusion Learning](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Open-Problems-in-Implicit-Diffusion-Learning) · [Language Models](https://mathstruct.org/Lenticulum.jl/dev/vault/Applications/Language-Models) · [product](https://mathstruct.org/Lenticulum.jl/dev/vault/lib/VariationalDiffusion.jl/product)
+> Lenticulum (vault): [Open Problems in Implicit Diffusion Learning](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Open-Problems-in-Implicit-Diffusion-Learning) · [Language Models](https://mathstruct.org/Lenticulum.jl/Applications/Language-Models) · [product](https://mathstruct.org/Lenticulum.jl/lib/VariationalDiffusion.jl/product)
 
 ### L1. A language model assembled from relations — **done (closed form)**
 

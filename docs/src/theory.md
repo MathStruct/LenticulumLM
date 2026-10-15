@@ -17,7 +17,7 @@ difficulties, and an honest record of what does not work yet) lives in the proje
 | *sequence*, *tokens* | the implementation notes beside `sequence.jl` and `tokens.jl` |
 
 The implicit learners, products, separators and beliefs these notes build on are explained in
-[Lenticulum's theory vault](https://mathstruct.org/Lenticulum.jl/dev/vault/), and the general
+[Lenticulum's theory vault](https://mathstruct.org/Lenticulum.jl/), and the general
 category theory in the [CT-ML wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/).
 
 ## Reading it in Obsidian

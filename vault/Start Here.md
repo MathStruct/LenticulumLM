@@ -18,7 +18,7 @@ The tools come from the Nix flake (`nix develop`), and data and checkpoints live
 repository; both are planned in [[Environment and Experiments]].
 
 LenticulumLM builds on [Lenticulum.jl](https://github.com/MathStruct/Lenticulum.jl), and its
-vault builds on Lenticulum's [theory vault](https://mathstruct.org/Lenticulum.jl/dev/vault/):
+vault builds on Lenticulum's [theory vault](https://mathstruct.org/Lenticulum.jl/):
 implicit learners, diffusion relations, products and separators, beliefs and factor graphs are
 explained there and **not** repeated here. The general category theory both rest on lives in the
 [CT-ML wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/), the root vault. This vault keeps

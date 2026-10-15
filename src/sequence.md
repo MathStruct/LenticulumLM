@@ -9,7 +9,7 @@
 >
 > Bibliography: [[Bibliography#^hinton2002poe|Hinton 2002]]
 >
-> Lenticulum (vault): [product](https://mathstruct.org/Lenticulum.jl/dev/vault/lib/VariationalDiffusion.jl/product) §4 (separators, longer chains) · [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Implicit-Diffusion-Learners) · [Language Models](https://mathstruct.org/Lenticulum.jl/dev/vault/Applications/Language-Models) §7
+> Lenticulum (vault): [product](https://mathstruct.org/Lenticulum.jl/lib/VariationalDiffusion.jl/product) §4 (separators, longer chains) · [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Implicit-Diffusion-Learners) · [Language Models](https://mathstruct.org/Lenticulum.jl/Applications/Language-Models) §7
 
 ## 1. The construction
 

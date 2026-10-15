@@ -100,7 +100,7 @@ title: LenticulumLM — theory vault
 model from implicit learners**: relations over a few token positions each, combined by product
 into one model whose every query (continue, predict backwards, fill in) is root finding with the
 known tokens clamped. It builds on [Lenticulum.jl](https://github.com/MathStruct/Lenticulum.jl),
-whose [theory vault](https://mathstruct.org/Lenticulum.jl/dev/vault/) explains the implicit
+whose [theory vault](https://mathstruct.org/Lenticulum.jl/) explains the implicit
 learners themselves. This vault records what is specific to language: the design, the
 implementation, and what does not work yet.
 
@@ -117,7 +117,7 @@ implementation, and what does not work yet.
 - **[[Start Here]]**: how the vault is organised, its conventions, and how to read it in Obsidian.
 - **[[README]]**: the project pitch.
 - **[API documentation](../)**: the Julia package itself, built with Documenter.
-- **[Lenticulum's vault](https://mathstruct.org/Lenticulum.jl/dev/vault/)** and the
+- **[Lenticulum's vault](https://mathstruct.org/Lenticulum.jl/)** and the
   **[CT-ML wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/)**: the theory this builds on.
 MD
 

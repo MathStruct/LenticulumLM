@@ -2,7 +2,7 @@
 
 > Every note of the LenticulumLM vault, in reading order. How the vault is organised and what
 > its conventions are: [[Start Here]]. The implicit learners, products and beliefs this builds
-> on are explained in [Lenticulum's vault](https://mathstruct.org/Lenticulum.jl/dev/vault/), and the
+> on are explained in [Lenticulum's vault](https://mathstruct.org/Lenticulum.jl/), and the
 > general category theory in the [CT-ML wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/);
 > links to both are ordinary web links, links within this vault are wikilinks.
 
@@ -29,5 +29,5 @@
 
 - [[Start Here]]: conventions
 - [[Bibliography]]: every cited work
-- Lenticulum's [Language Models](https://mathstruct.org/Lenticulum.jl/dev/vault/Applications/Language-Models)
+- Lenticulum's [Language Models](https://mathstruct.org/Lenticulum.jl/Applications/Language-Models)
   note: products of diffusion language models, and why the graph only pays off when it has structure

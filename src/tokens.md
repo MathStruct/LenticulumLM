@@ -9,7 +9,7 @@
 >
 > Bibliography: [[Bibliography#^li2022diffusionlm|Li et al. 2022]] · [[Bibliography#^austin2021d3pm|Austin et al. 2021]]
 >
-> Lenticulum (vault): [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/dev/vault/Families/Diffusion/Implicit-Diffusion-Learners) §2 (polarity is a precision vector) · [MNIST in Both Directions](https://mathstruct.org/Lenticulum.jl/dev/vault/Applications/MNIST-in-Both-Directions) (a label as a scaled one-hot code)
+> Lenticulum (vault): [Implicit Diffusion Learners](https://mathstruct.org/Lenticulum.jl/Families/Diffusion/Implicit-Diffusion-Learners) §2 (polarity is a precision vector) · [MNIST in Both Directions](https://mathstruct.org/Lenticulum.jl/Applications/MNIST-in-Both-Directions) (a label as a scaled one-hot code)
 
 ## 1. The encoding
 
