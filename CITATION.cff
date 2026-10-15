@@ -4,9 +4,8 @@ type: software
 title: "LenticulumLM: a diffusion language model assembled from implicit learners"
 version: "20261015-proto"
 authors:
-  - family-names: Boigk
-    given-names: Daniel
-    orcid: "https://orcid.org/0009-0003-0812-8869"
+  - name: "MathStruct"
+    website: "https://mathstruct.org"
 license: MIT
 repository-code: "https://github.com/MathStruct/LenticulumLM"
 url: "https://mathstruct.github.io/LenticulumLM/dev/"
