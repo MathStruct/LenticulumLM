@@ -1,13 +1,17 @@
 # The vault as a website
 
 The Obsidian vault is rendered to a static site with [Quartz v4](https://quartz.jzhao.xyz)
-and deployed **inside** the Documenter site, at `<site>/dev/vault/`. The two link to each
-other: Documenter's "Theory vault" page points here, and this site's footer points back.
+and is the **front page** of the project's site, [mathstruct.org/LenticulumLM](https://mathstruct.org/LenticulumLM/);
+the Documenter site (the API docs and tutorials) is under `api/dev/`. `docs/make.jl` builds both
+and deploys the API docs (`deploydocs(dirname = "api")`); the Docs workflow then deploys the
+vault with `deploy_vault.sh`, which also rewrites `dev/`, the site's address until October 2026,
+as redirect stubs to the new addresses (`redirects.py`). The two sites link to each other:
+Documenter's "Theory vault" page points here, and this site's footer points back.
 
 ## Building locally
 
 ```sh
-docs/site/build.sh             # builds into docs/build/vault/
+docs/site/build.sh             # builds into docs/vault-build/
 docs/site/build.sh --serve     # live preview at http://localhost:8080
 ```
 

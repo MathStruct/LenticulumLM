@@ -84,6 +84,14 @@ end
 
 using LenticulumLM
 
+# The site is mathstruct.org/LenticulumLM: the vault is its front page, and this API
+# documentation lives under api/ (deploydocs' `dirname`), api/dev/ for master. The pages link to
+# the vault through LENTICULUMLM_VAULT_URL.
+const SITE = "https://mathstruct.org/LenticulumLM"
+const VAULT_URL = "$(SITE)/"
+const API_URL = "$(SITE)/api/dev/"
+ENV["LENTICULUMLM_VAULT_URL"] = VAULT_URL
+
 # One bibliography for the docs and the vault (docs/site/bib2vault.py renders it there)
 const BIB = CitationBibliography(joinpath(@__DIR__, "src", "refs.bib"); style = :authoryear)
 
@@ -93,7 +101,7 @@ makedocs(;
     authors = "Daniel Boigk",
     modules = [LenticulumLM],
     format = Documenter.HTML(;
-        canonical = "https://MathStruct.github.io/LenticulumLM",
+        canonical = "https://mathstruct.org/LenticulumLM/api/dev",
         edit_link = "master",
         assets = String[],
     ),
@@ -111,20 +119,24 @@ makedocs(;
     warnonly = [:missing_docs, :cross_references],
 )
 
-# --- The Obsidian vault, rendered with Quartz, deployed inside this site ---------------
-# `docs/site/build.sh` stages the vault and builds it into docs/build/vault/, which
-# deploydocs then ships along with everything else, so it lands at <site>/dev/vault/.
-# It needs Node ≥ 22; if `npx` is not on the path the API docs still build on their own.
+# --- The Obsidian vault, rendered with Quartz, at the front of the site -------------------
+# `docs/site/build.sh` builds the vault into docs/vault-build/, outside docs/build/, so that
+# deploydocs does not ship a second copy of it; the Docs workflow deploys it to the site's root
+# (docs/site/deploy_vault.sh), which also turns the old dev/ addresses into redirects. It needs
+# Node ≥ 22; without `npx` the API docs build alone.
 let script = joinpath(@__DIR__, "site", "build.sh")
     if Sys.which("npx") === nothing
         @warn "npx not found — skipping the theory vault (docs/site/build.sh). The API docs are unaffected."
     else
         @info "Building the theory vault with Quartz"
-        run(`$script`)
+        withenv("VAULT_BASEURL" => "mathstruct.org/LenticulumLM", "VAULT_API_URL" => API_URL) do
+            run(`$script`)
+        end
     end
 end
 
 deploydocs(;
     repo = "github.com/MathStruct/LenticulumLM",
+    dirname = "api",
     devbranch = "master",
 )

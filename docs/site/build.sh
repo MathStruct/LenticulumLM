@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the Obsidian vault into a static site with Quartz, next to the Documenter site.
 #
-#   docs/site/build.sh               # -> docs/build/vault/
+#   docs/site/build.sh               # -> docs/vault-build/
 #   docs/site/build.sh --serve       # local preview on http://localhost:8080
 #
 # Layout:
@@ -9,7 +9,11 @@
 #   docs/site/quartz.layout.ts      our layout    (committed)
 #   docs/quartz/                    Quartz v4 checkout (gitignored; cloned on first run)
 #   docs/quartz/content/            staged copy of the vault (regenerated every run)
-#   docs/build/vault/               output — deployed by Documenter as <site>/dev/vault/
+#   docs/vault-build/               output — deployed as the site's front page by
+#                                   docs/site/deploy_vault.sh
+#
+# Environment (set by docs/make.jl): VAULT_BASEURL (default mathstruct.org/LenticulumLM) and
+# VAULT_API_URL (where the API docs are; default <site>/api/dev/).
 #
 # The vault is the whole repository (see "vault/Start Here.md"), but its notes live in two places:
 # vault/ and the *.md files beside src/*.jl. Quartz wants one content directory, so this script
@@ -20,7 +24,8 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$HERE/../.." && pwd)"
 QUARTZ="$ROOT/docs/quartz"
-OUT="$ROOT/docs/build/vault"
+OUT="${VAULT_OUT:-$ROOT/docs/vault-build}"
+API_URL="${VAULT_API_URL:-https://mathstruct.org/LenticulumLM/api/dev/}"
 SERVE=0
 [[ "${1:-}" == "--serve" ]] && SERVE=1
 
@@ -41,6 +46,9 @@ fi
 # --- 2. our configuration over the stock one ----------------------------------
 cp "$HERE/quartz.config.ts" "$QUARTZ/quartz.config.ts"
 cp "$HERE/quartz.layout.ts" "$QUARTZ/quartz.layout.ts"
+if [[ -n "${VAULT_BASEURL:-}" ]]; then
+  sed -i "s#baseUrl: \"[^\"]*\"#baseUrl: \"$VAULT_BASEURL\"#" "$QUARTZ/quartz.config.ts"
+fi
 
 # --- 2b. the TikZ plugin (renders ```tikz blocks to SVG at build time) -------------
 # Ported from MathStruct/CategoryTheory-ML-Wiki. The stock checkout has neither the plugin
@@ -116,10 +124,12 @@ implementation, and what does not work yet.
 - **[[Map of Content]]**: every note, in reading order.
 - **[[Start Here]]**: how the vault is organised, its conventions, and how to read it in Obsidian.
 - **[[README]]**: the project pitch.
-- **[API documentation](../)**: the Julia package itself, built with Documenter.
+- **[API documentation](@API@)**: the Julia package itself, built with Documenter.
 - **[Lenticulum's vault](https://mathstruct.org/Lenticulum.jl/)** and the
   **[CT-ML wiki](https://mathstruct.org/CategoryTheory-ML-Wiki/)**: the theory this builds on.
 MD
+
+sed -i "s#@API@#$API_URL#g" "$CONTENT/index.md"
 
 # --- 3b. lint: display math that Obsidian accepts but remark-math truncates on -----------
 # A `$$` block opened with content on the fence line and closed with `$$` at the end of a
@@ -155,7 +165,7 @@ if [[ $SERVE -eq 1 ]]; then
   exec npx quartz build --serve -o "$OUT"
 else
   npx quartz build -o "$OUT"
-  echo ">> vault built into docs/build/vault ($(find "$OUT" -name '*.html' | wc -l) pages)"
+  echo ">> vault built into ${OUT#$ROOT/} ($(find "$OUT" -name '*.html' | wc -l) pages)"
   # KaTeX renders with throwOnError:false, so a bad formula becomes red text rather than a
   # failed build. Surface them here (e.g. \tag in a single-line $$...$$, which remark-math
   # parses as *inline* math — put such fences on their own lines).

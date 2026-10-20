@@ -2,10 +2,11 @@
 
 Everything these pages leave out (the design, the implementation notes with their
 difficulties, and an honest record of what does not work yet) lives in the project's
-**Obsidian vault**. It is rendered as a website and deployed beside this one:
+**Obsidian vault**. It is rendered as a website, the front page of this one:
 
-```@raw html
-<blockquote><p><strong><a href="../vault/">Open the theory vault →</a></strong></p></blockquote>
+```@eval
+using Markdown
+Markdown.parse("> **[Open the theory vault →](" * ENV["LENTICULUMLM_VAULT_URL"] * ")**")
 ```
 
 ## What is in it

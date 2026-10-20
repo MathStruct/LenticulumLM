@@ -75,7 +75,7 @@ show_query(['a', nothing, 'c'], 1, mid ./ sum(mid))                       # infi
 # The windows here are exact. A learned window (an energy network trained on the windows of a
 # corpus) plugs into `sequence_relation` the same way; training one, and the smoothing bias that
 # comes with it, is the next step in the
-# [roadmap](https://mathstruct.org/LenticulumLM/dev/vault/Design/Open-Problems-in-Assembling-Language-Models).
+# [roadmap](https://mathstruct.org/LenticulumLM/Design/Open-Problems-in-Assembling-Language-Models).
 # Enumerating every answer is also exponential in the number of unknown positions: a real model
 # will pass per-position beliefs between windows instead.
 

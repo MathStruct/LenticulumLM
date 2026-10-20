@@ -13,3 +13,4 @@ __pycache__/
 /lib/*/examples/*/Manifest.toml
 /.direnv/
 /result*
+/docs/vault-build/

@@ -62,7 +62,9 @@ Links between notes of this vault are `[[wikilinks]]` by note name.
 
 ## Reading it
 
-- **On the web**: the vault is rendered with Quartz and deployed beside the API documentation.
+- **On the web**: the vault is rendered with Quartz as the front page of
+  [mathstruct.org/LenticulumLM](https://mathstruct.org/LenticulumLM/); the API documentation is
+  under [api/dev](https://mathstruct.org/LenticulumLM/api/dev/).
 - **In Obsidian**: open the repository root as a vault. The *Inline TikZ* community plugin
   renders the diagrams.
 

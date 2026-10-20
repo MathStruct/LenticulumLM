@@ -3,7 +3,7 @@ import * as Component from "./quartz/components"
 
 // Copied over the stock `quartz.layout.ts` by `docs/site/build.sh`.
 // Deliberate change from stock: the footer links back to the API documentation (the
-// Documenter site this vault is deployed inside) and to the repository. Lenticulum's vault
+// Documenter site under api/) and to the repository. Lenticulum's vault
 // also has a Giscus comment thread per note; this one has none until the repository has
 // Discussions enabled and its giscus repository and category ids are filled in here.
 
@@ -13,7 +13,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "API documentation": "../",
+      // set by docs/make.jl through docs/site/build.sh
+      "API documentation": process.env.VAULT_API_URL ?? "https://mathstruct.org/LenticulumLM/api/dev/",
       GitHub: "https://github.com/MathStruct/LenticulumLM",
     },
   }),

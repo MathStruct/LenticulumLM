@@ -1,7 +1,7 @@
 # LenticulumLM
 
 [![CI](https://github.com/MathStruct/LenticulumLM/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/MathStruct/LenticulumLM/actions/workflows/CI.yml?query=branch%3Amaster)
-[![Docs](https://github.com/MathStruct/LenticulumLM/actions/workflows/Docs.yml/badge.svg?branch=master)](https://MathStruct.github.io/LenticulumLM/dev/)
+[![Docs](https://github.com/MathStruct/LenticulumLM/actions/workflows/Docs.yml/badge.svg?branch=master)](https://mathstruct.org/LenticulumLM/api/dev/)
 
 **A diffusion language model assembled from implicit learners.** A language model is usually
 one network that runs one way. LenticulumLM builds one from parts: each part is a *relation*
@@ -111,8 +111,9 @@ Pkg.develop([PackageSpec(path = "../Lenticulum.jl"),
 
 ## Reading the theory
 
-- The **vault**, on the web beside the [documentation](https://MathStruct.github.io/LenticulumLM/dev/),
-  or in Obsidian: open the repository root and start at `vault/Start Here.md`.
+- The **vault**, on the web at [mathstruct.org/LenticulumLM](https://mathstruct.org/LenticulumLM/) (the API
+  documentation is under [api/dev](https://mathstruct.org/LenticulumLM/api/dev/)), or in Obsidian:
+  open the repository root and start at `vault/Start Here.md`.
 - **Lenticulum's vault**, for the implicit learners themselves:
   [mathstruct.org/Lenticulum.jl](https://mathstruct.org/Lenticulum.jl/).
 - The **CT-ML wiki**, for the general category theory both build on:

@@ -8,7 +8,7 @@ authors:
     website: "https://mathstruct.org"
 license: MIT
 repository-code: "https://github.com/MathStruct/LenticulumLM"
-url: "https://mathstruct.github.io/LenticulumLM/dev/"
+url: "https://mathstruct.org/LenticulumLM/"
 keywords:
   - diffusion language models
   - implicit learning
