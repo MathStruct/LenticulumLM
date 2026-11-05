@@ -1,6 +1,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://mathstruct.org/LenticulumLM/Background/Diffusion-Language-Models</loc>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
+  </url><url>
+    <loc>https://mathstruct.org/LenticulumLM/Background/Embeddings-in-a-Diffusion-Language-Model</loc>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
+  </url><url>
+    <loc>https://mathstruct.org/LenticulumLM/Background/Factor-Graphs-against-Mixtures-of-Experts-and-Agent-Chains</loc>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
+  </url><url>
+    <loc>https://mathstruct.org/LenticulumLM/Background/How-a-Diffusion-Language-Model-Generates</loc>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
+  </url><url>
+    <loc>https://mathstruct.org/LenticulumLM/Background/Meaning-as-a-Relation-over-Text</loc>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
+  </url><url>
     <loc>https://mathstruct.org/LenticulumLM/Bibliography</loc>
-    <lastmod>2026-10-14T23:32:14.000Z</lastmod>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
   </url><url>
     <loc>https://mathstruct.org/LenticulumLM/Design/Assembling-a-Language-Model-from-Implicit-Learners</loc>
     <lastmod>2026-10-15T11:58:46.000Z</lastmod>
@@ -12,7 +27,7 @@
     <lastmod>2026-10-15T11:58:46.000Z</lastmod>
   </url><url>
     <loc>https://mathstruct.org/LenticulumLM/Map-of-Content</loc>
-    <lastmod>2026-10-15T11:58:46.000Z</lastmod>
+    <lastmod>2026-11-05T16:51:55.000Z</lastmod>
   </url><url>
     <loc>https://mathstruct.org/LenticulumLM/README</loc>
     <lastmod>2026-10-20T10:12:42.000Z</lastmod>
