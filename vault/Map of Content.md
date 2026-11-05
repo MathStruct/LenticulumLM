@@ -13,6 +13,8 @@
 - [[README]]: the project pitch
 - [[Environment and Experiments]]: the Nix shells, the layout experiments will take, and where
   data, teacher models and checkpoints live
+- [[Incremental Next-Token Prediction]]: an idea. Grow the graph a token at a time (as iSAM does)
+  and denoise ahead with noise rising with recency; its precedents and open questions
 
 ## 1b. Background
 

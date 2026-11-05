@@ -61,6 +61,15 @@ in Du et al.) or lower levels are the known remedies.
 Dissect a small open-weight language model into a graph of language diffusion relations, with
 embeddings only at the input and output. It depends on L3 to L6.
 
+### L9. Incremental next-token prediction — **an idea**
+
+Grow the graph a token at a time, as iSAM grows its graph a measurement at a time, and denoise the
+positions ahead by a proximal solve whose noise level rises with a position's recency (the past
+clean, the future noisy), warm-started from the previous solution. Precedents (AR-Diffusion,
+Rolling Diffusion, Diffusion Forcing) establish the schedule for single networks. Open: whether the
+window relations must be trained with it, how many tokens can be in flight, and what an append
+costs. Depends on L2, and on L6 for revising the past's reading. See [[Incremental Next-Token Prediction]].
+
 ## Summary
 
 | | step | status |
@@ -73,5 +82,6 @@ embeddings only at the input and output. It depends on L3 to L6.
 | L6 | long-range structure | open |
 | L7 | composition at $t > 0$ | open, shared with Lenticulum |
 | L8 | distillation | moonshot |
+| L9 | incremental next-token prediction | an idea ([[Incremental Next-Token Prediction]]) |
 
 Related: [[Assembling a Language Model from Implicit Learners]], [[sequence]], [[tokens]]
